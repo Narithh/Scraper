@@ -31,9 +31,9 @@ Note: The repository contains an example devcontainer configuration (.devcontain
 - -n, --num-sites: Number of search results to scrape. Default: 3
 - -m, --max-words: Maximum words to keep from each site. Default: 1000
 - -o, --output: Path to output Markdown file. Default: output.md
-- - --append: Append to existing file instead of overwriting
-- - --verbatim: Enable printed progress output. By default the scraper is silent and only writes errors to stderr; pass --verbatim to see Searching/Opening/Saved messages.
-- - --headless: Run the browser in headless mode (the script defaults to headed), **not recommended will be challenged by CAPTCHAs everywhere**
+- --append: Append to existing file instead of overwriting
+- --verbatim: Enable printed progress output. By default the scraper is silent and only writes errors to stderr; pass --verbatim to see Searching/Opening/Saved messages.
+- --headless: Run the browser in headless mode (the script defaults to headed), **not recommended will be challenged by CAPTCHAs everywhere**
 
 **Output format**
 
