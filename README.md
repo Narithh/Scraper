@@ -32,7 +32,7 @@ Note: The repository contains an example devcontainer configuration (.devcontain
 - -m, --max-words: Maximum words to keep from each site. Default: 1000
 - -o, --output: Path to output Markdown file. Default: output.md
 - --append: Append to existing file instead of overwriting
-- --verbatim: Enable printed progress output. By default the scraper is silent and only writes errors to stderr; pass --verbatim to see Searching/Opening/Saved messages.
+- --verbatim: Enable printed progress output. By default the scraper is silent and only writes errors to stderr
 - --headless: Run the browser in headless mode (the script defaults to headed), **not recommended will be challenged by CAPTCHAs everywhere**
 
 **Output format**
@@ -65,8 +65,7 @@ The .devcontainer/devcontainer.json provided in this repo contains:
   "name": "Scraper",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "runArgs": ["--privileged","--cap-add=ALL"],
-  "remoteUser": "root",
-  "postCreateCommand": "apt-get update && apt-get install -y python3 python3-pip xvfb && pip3 install playwright readability-lxml bs4 && playwright install --with-deps"
+  "postCreateCommand": "apt-get update && apt-get install -y git python3 python3-pip xvfb && pip3 install playwright==1.58.0 readability-lxml==0.8.4.1 beautifulsoup4==4.14.3 bs4==0.0.2 lxml==6.0.2 && playwright install --with-deps"
 }
 ```
 

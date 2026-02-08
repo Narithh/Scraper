@@ -1,5 +1,5 @@
 {
-  "name": "ChatAndScrape",
+  "name": "Scraper",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "runArgs": [
     "--privileged",
