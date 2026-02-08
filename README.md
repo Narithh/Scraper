@@ -24,12 +24,6 @@ Note: The repository contains an example devcontainer configuration (.devcontain
 
 ## Usage
 
-**Basic invocation (uses built-in default search query):**
-
-    python3 scrape.py
-
-**Specify a query and options:**
-
     xvfb-run -a python3 scrape.py "best console editor for linux" -n 5 -m 800 -o results.md
     
 **Options**
