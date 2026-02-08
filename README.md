@@ -30,19 +30,19 @@ Note: The repository contains an example devcontainer configuration (.devcontain
 
 **Specify a query and options:**
 
-    python3 scrape.py "best console editor for linux" -n 5 -m 800 -o results.md --headless
+    ``` bash
     xvfb-run -a python3 scrape.py "best console editor for linux" -n 5 -m 800 -o results.md
-Options
+    ```
+**Options**
 - query (positional): Search query (defaults to "best console editor for linux")
 - -n, --num-sites: Number of search results to scrape. Default: 3
 - -m, --max-words: Maximum words to keep from each site. Default: 1000
 - -o, --output: Path to output Markdown file. Default: output.md
 - - --append: Append to existing file instead of overwriting
-- - --headless: Run the browser in headless mode (the script defaults to headed)
 - - --verbatim: Enable printed progress output. By default the scraper is silent and only writes errors to stderr; pass --verbatim to see Searching/Opening/Saved messages.
-- --headless: Run the browser in headless mode (the script defaults to headed)
+- - --headless: Run the browser in headless mode (the script defaults to headed), **not recommended will be challenged by CAPTCHAs everywhere**
 
-Output format
+**Output format**
 
 The output Markdown contains one section per URL. Each entry looks like:
 
