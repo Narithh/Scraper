@@ -79,12 +79,14 @@ The .devcontainer/devcontainer.json provided in this repo contains:
 - If extraction yields no readable content for a site, the script will skip it and continue. Make sure the target page contains an article/main content — some heavier client-side sites may require additional rendering.
 
 ## Development notes
-- Relevant functions in scrape.py:
-  - fetch_search_results(page, query, num_sites)
-  - scrape_page(page, url, max_words)
-  - extract_main_text(html)
-  - write_markdown(output_path, results, append)
-- Feel free to adjust human_delay(), default flags, or the extraction pipeline (e.g., tune readability options) to improve results.
+- Relevant functions in scrape.py (now methods on DDGScraper):
+  - DDGScraper.fetch_search_results(page, query, num_sites) — perform the DuckDuckGo query and return top result URLs
+  - DDGScraper.scrape_page(page, url, max_words) — load an article page and extract/truncate readable text
+  - DDGScraper.extract_main_text(html) — run readability + BeautifulSoup to extract the main article text
+  - DDGScraper.write_markdown(output_path, results, append) — persist scraped results to a Markdown file
+  - Additional helpers: DDGScraper.human_delay(), DDGScraper.is_captcha_page(), DDGScraper.ensure_not_captcha(), DDGScraper.truncate_words()
+
+Feel free to adjust human_delay(), default flags, or the extraction pipeline (e.g., tune readability options) to improve results.
 
 ## License
 This project is released under the GNU General Public License version 3 (GPLv3).
