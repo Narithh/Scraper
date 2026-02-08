@@ -1,0 +1,13 @@
+This project includes software components licensed under the Apache License 2.0:
+
+- Playwright (Microsoft)
+- Readability-lxml
+- Any transitive dependencies under Apache 2.0
+
+The Apache License 2.0 requires that this NOTICE file be included with any
+redistribution of this project. The full text of the Apache License 2.0 is
+available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+No changes were made to these components beyond their normal use as dependencies.
