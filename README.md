@@ -30,9 +30,8 @@ Note: The repository contains an example devcontainer configuration (.devcontain
 
 **Specify a query and options:**
 
-    ``` bash
     xvfb-run -a python3 scrape.py "best console editor for linux" -n 5 -m 800 -o results.md
-    ```
+    
 **Options**
 - query (positional): Search query (defaults to "best console editor for linux")
 - -n, --num-sites: Number of search results to scrape. Default: 3
